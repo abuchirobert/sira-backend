@@ -4,7 +4,9 @@ const bcrypt = require('bcryptjs');
 
 class UserService {
     async createUserService(email, password) {
-        const password_hash = bcrypt.hashSync(password, 10);
+    
+        const password_hash = password ?  bcrypt.hashSync(password, 10) : '';
+        
         const user = new User({ email, password: password_hash });
         return await user.save();
     }

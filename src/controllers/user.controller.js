@@ -25,7 +25,7 @@ class UserController {
 
             //    check if the password character is less than 8
 
-            if (password.length < 8) {
+            if (password && password.length < 8) {
                 return res.status(400).json({
                     status: false,
                     message: 'Password is too short, use at leaast 8 characters'

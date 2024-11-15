@@ -16,7 +16,12 @@ const userSchema = new mongoose.Schema({
         // required: [true, '{PATH} is Required'],
         trim: true
     }
-});
+},
+    {
+        versionKey: false,
+        timestamps: true,
+    }
+);
 
 
 
