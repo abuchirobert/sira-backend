@@ -51,7 +51,8 @@ class ReportController {
             } else {
                 res.status(500).json({
                     status: false,
-                    message: `Error while adding report data: ${error.message}`,
+                    message: `Error while adding Report data: ${error.message}`,
+                    name: process.env.NODE_ENV !== 'production' ? error.name : '',
                     stack: process.env.NODE_ENV !== 'production' ?  error.stack : ''
                 });
             }
