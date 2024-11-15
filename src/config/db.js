@@ -8,7 +8,8 @@ const connectDB = async () => {
 
     try {
         const conn = await mongoose.connect(process.env.MONGO_URL);
-        // console.log(`MongoDB Connected: ${conn.connection.host} ${conn.connection.name}`);
+        //console.log(`Database is connected`)
+        //console.log(`MongoDB Connected: ${conn.connection.host} ${conn.connection.name}`);
 
         // Handle disconnect event
         mongoose.connection.on('disconnect', () => {

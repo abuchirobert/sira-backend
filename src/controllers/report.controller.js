@@ -51,7 +51,7 @@ class ReportController {
             } else {
                 res.status(500).json({
                     status: false,
-                    message: `Error while adding vehicle data: ${error.message}`,
+                    message: `Error while adding report data: ${error.message}`,
                     stack: process.env.NODE_ENV !== 'production' ?  error.stack : ''
                 });
             }
