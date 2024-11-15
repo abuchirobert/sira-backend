@@ -7,7 +7,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-console.log('Cloudinary API Key:', process.env.CLOUDINARY_API_KEY);
+// console.log('Cloudinary API Key:', process.env.CLOUDINARY_API_KEY);
 class ReportService {
     uploadService = async (file, otherFields, id) => {
         if (!file) {

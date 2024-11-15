@@ -23,7 +23,7 @@ class ReportController {
             if (reportData) {
                 res.status(201).json({
                     status: true,
-                    message: 'Vehicle data was successfully uploaded...'
+                    message: 'Report uploaded successfully...'
                 });
             }
         } catch (error) {
