@@ -52,7 +52,7 @@ class ReportController {
                 res.status(500).json({
                     status: false,
                     message: `Error while adding vehicle data: ${error.message}`,
-                    stack: error.stack
+                    stack: process.env.NODE_ENV !== 'production' ?  error.stack : ''
                 });
             }
         }
